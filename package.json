@@ -1,7 +1,7 @@
 {
-  "name": "comp308-w2017-lesson2b",
+  "name": "comp308-w2017-lesson3b",
   "version": "1.0.0",
-  "description": "Demo Connect App for Lesson 2",
+  "description": "Demo Express App for Lesson 3",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CentennialCollege/COMP308-W2017-Lesson2B.git"
+    "url": "git+https://github.com/CentennialCollege/COMP308-W2017-Lesson3B.git"
   },
   "keywords": [
     "NodeJS",
@@ -21,10 +21,10 @@
   "author": "Tom Tsiliopoulos",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CentennialCollege/COMP308-W2017-Lesson2B/issues"
+    "url": "https://github.com/CentennialCollege/COMP308-W2017-Lesson3B/issues"
   },
-  "homepage": "https://github.com/CentennialCollege/COMP308-W2017-Lesson2B#readme",
+  "homepage": "https://github.com/CentennialCollege/COMP308-W2017-Lesson3B#readme",
   "dependencies": {
-    "connect": "^3.5.0"
+    "express": "^4.14.0"
   }
 }
