@@ -1,0 +1,30 @@
+{
+  "name": "comp308-w2017-lesson2b",
+  "version": "1.0.0",
+  "description": "Demo Connect App for Lesson 2",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CentennialCollege/COMP308-W2017-Lesson2B.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "Connect",
+    "JavaScript",
+    "MEAN",
+    "Stack"
+  ],
+  "author": "Tom Tsiliopoulos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CentennialCollege/COMP308-W2017-Lesson2B/issues"
+  },
+  "homepage": "https://github.com/CentennialCollege/COMP308-W2017-Lesson2B#readme",
+  "dependencies": {
+    "connect": "^3.5.0"
+  }
+}
