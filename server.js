@@ -1,37 +1,90 @@
-let express = require('express');
+#!/usr/bin/env node
 
-// create an instance of the express server - app
-let app = express();
+/**
+ * Module dependencies.
+ */
 
-// create the port constant
-const localport = 3000;
+let app = require('./app');
+let debug = require('debug')('comp308-w2017-lesson3b:server');
+let http = require('http');
 
 /**
  * Get port from environment and store in Express.
  */
-let port = process.env.PORT || localport;
+
+let port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
 
-// start listening on the port
-app.listen(port);
-console.log(`Server started at http://localhost:${port}`);
+/**
+ * Create HTTP server.
+ */
 
-// ROUTING - mounted our routes
+let server = http.createServer(app);
 
-// second route is '/hello'
-app.use('/hello', (req, res, next) => {
-  res.setHeader('Content-Type', 'text/plain');
-  res.end("Hello, World!");
+/**
+ * Listen on provided port, on all network interfaces.
+ */
 
-  next();
-});
+server.listen(port);
+server.on('error', onError);
+server.on('listening', onListening);
 
-// first route is '/' - root of my website
-app.use('/', (req, res, next) => {
-  res.setHeader('Content-Type', 'text/plain');
-  res.end("Welcome!");
+/**
+ * Normalize a port into a number, string, or false.
+ */
 
-  next();
-});
+function normalizePort(val) {
+  let port = parseInt(val, 10);
 
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
 
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== 'listen') {
+    throw error;
+  }
+
+  let bind = typeof port === 'string'
+    ? 'Pipe ' + port
+    : 'Port ' + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case 'EACCES':
+      console.error(bind + ' requires elevated privileges');
+      process.exit(1);
+      break;
+    case 'EADDRINUSE':
+      console.error(bind + ' is already in use');
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  let addr = server.address();
+  let bind = typeof addr === 'string'
+    ? 'pipe ' + addr
+    : 'port ' + addr.port;
+  debug('Listening on ' + bind);
+}

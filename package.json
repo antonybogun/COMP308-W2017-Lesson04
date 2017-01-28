@@ -1,34 +1,39 @@
 {
   "name": "comp308-w2017-lesson3b",
-  "version": "1.0.0",
-  "description": "Demo Express App for Lesson 3",
-  "main": "server.js",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "morgan": "~1.7.0",
+    "serve-favicon": "~2.3.0"
   },
   "engines": {
     "node": ">=6.0.0",
     "npm": ">=3.5.0"
   },
+  "description": "## Welcome to Lesson 3 - Building Web Apps with Express",
+  "main": "server.js",
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CentennialCollege/COMP308-W2017-Lesson3B.git"
   },
   "keywords": [
     "NodeJS",
-    "Connect",
-    "JavaScript",
-    "MEAN",
-    "Stack"
+    "ExpressJS",
+    "EJS"
   ],
   "author": "Tom Tsiliopoulos",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CentennialCollege/COMP308-W2017-Lesson3B/issues"
   },
-  "homepage": "https://github.com/CentennialCollege/COMP308-W2017-Lesson3B#readme",
-  "dependencies": {
-    "express": "^4.14.0"
-  }
+  "homepage": "https://github.com/CentennialCollege/COMP308-W2017-Lesson3B#readme"
 }
