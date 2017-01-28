@@ -4,7 +4,13 @@ let express = require('express');
 let app = express();
 
 // create the port constant
-const port = 3000;
+const localport = 3000;
+
+/**
+ * Get port from environment and store in Express.
+ */
+let port = process.env.PORT || localport;
+app.set('port', port);
 
 // start listening on the port
 app.listen(port);
