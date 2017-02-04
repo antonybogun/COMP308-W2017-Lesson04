@@ -1,9 +1,9 @@
 {
-  "name": "comp308-w2017-lesson3b",
-  "description": "## Welcome to Lesson 3 - Building Web Apps with Express",
+  "name": "comp308-w2017-lesson4",
+  "description": "## Welcome to Lesson 4 - Building Web Apps with MongoDB",
   "main": "server.js",
   "authors": [
-    "Tom Tsiliopoulos"
+    "Tony Bogun"
   ],
   "license": "ISC",
   "keywords": [
@@ -11,7 +11,7 @@
     "ExpressJS",
     "EJS"
   ],
-  "homepage": "https://github.com/CentennialCollege/COMP308-W2017-Lesson3B",
+  "homepage": "https://github.com/antonybogun/COMP308-W2017-Lesson04",
   "ignore": [
     "**/.*",
     "node_modules",
